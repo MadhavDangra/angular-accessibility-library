@@ -1,0 +1,82 @@
+<div class="table-wrap" [attr.aria-busy]="loading || null">
+  <div *ngIf="loading" class="table-overlay" role="status" aria-live="polite">
+    <span class="spinner" aria-hidden="true"></span>
+    <span class="sr-only">Loading table data…</span>
+  </div>
+
+  <div class="table-scroll" tabindex="0" [attr.aria-label]="'Scrollable: ' + tableLabel">
+    <table role="grid"
+      [attr.aria-label]="tableLabel"
+      [attr.aria-multiselectable]="selectable || null"
+      [attr.aria-rowcount]="data.length">
+      <caption class="sr-only">{{ caption || tableLabel }}</caption>
+
+      <thead>
+        <tr role="row">
+          <th *ngIf="selectable" scope="col" role="columnheader" class="col-check">
+            <mat-checkbox [checked]="allSelected" [indeterminate]="someSelected"
+              (change)="toggleAll()" aria-label="Select all rows" color="primary">
+            </mat-checkbox>
+          </th>
+          <th *ngFor="let col of columns; trackBy: trackByKey" scope="col" role="columnheader"
+            [style.width]="col.width" [style.text-align]="col.align || 'left'"
+            [class.sortable]="col.sortable"
+            [attr.aria-sort]="getSortAria(col.key)">
+            <button *ngIf="col.sortable; else plain" type="button" class="sort-btn"
+              (click)="onSort(col.key)" [attr.aria-label]="getSortLabel(col)">
+              {{ col.label }}
+              <span class="sort-icons" aria-hidden="true">
+                <mat-icon [class.active]="sortCol === col.key && sortDir === 'asc'">arrow_upward</mat-icon>
+                <mat-icon [class.active]="sortCol === col.key && sortDir === 'desc'">arrow_downward</mat-icon>
+              </span>
+            </button>
+            <ng-template #plain>{{ col.label }}</ng-template>
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngIf="!loading && sortedData.length === 0" role="row">
+          <td [attr.colspan]="columns.length + (selectable ? 1 : 0)" class="empty-cell" role="gridcell">
+            <div class="empty-state" role="status" aria-live="polite">
+              <mat-icon aria-hidden="true">inbox</mat-icon>
+              <p>{{ emptyMessage }}</p>
+            </div>
+          </td>
+        </tr>
+
+        <tr *ngFor="let row of sortedData; let i = index; trackBy: trackByIndex"
+          role="row" [class.row--selected]="isSelected(row)"
+          [attr.aria-selected]="selectable ? isSelected(row) : null"
+          [attr.aria-rowindex]="i + 1"
+          (click)="selectable && toggleRow(row)"
+          [attr.tabindex]="selectable ? 0 : null">
+          <td *ngIf="selectable" class="col-check" role="gridcell">
+            <mat-checkbox [checked]="isSelected(row)" (change)="toggleRow(row)"
+              [attr.aria-label]="'Select row ' + (i+1)" color="primary"
+              (click)="$event.stopPropagation()">
+            </mat-checkbox>
+          </td>
+          <td *ngFor="let col of columns; trackBy: trackByKey"
+            role="gridcell" [style.text-align]="col.align || 'left'">
+            <span *ngIf="col.type === 'badge'"
+              class="badge" [class]="'badge--' + (row[col.key] | lowercase)" role="status">
+              {{ row[col.key] }}
+            </span>
+            <time *ngIf="col.type === 'date'" [dateTime]="row[col.key]">
+              {{ row[col.key] | date:'mediumDate' }}
+            </time>
+            <ng-container *ngIf="col.type !== 'badge' && col.type !== 'date'">
+              {{ row[col.key] }}
+            </ng-container>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p *ngIf="selectable && selectedRows.size > 0" class="selection-bar"
+    aria-live="polite" aria-atomic="true">
+    {{ selectedRows.size }} row{{ selectedRows.size !== 1 ? 's' : '' }} selected
+  </p>
+</div>

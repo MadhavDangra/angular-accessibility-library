@@ -1,0 +1,19 @@
+<button
+  [class]="buttonClasses"
+  [attr.aria-label]="ariaLabel || null"
+  [attr.aria-disabled]="disabled || null"
+  [attr.aria-busy]="loading || null"
+  [attr.aria-describedby]="ariaDescribedBy || null"
+  [attr.type]="type"
+  [disabled]="disabled ? true : null"
+  (click)="handleClick($event)"
+>
+  <span *ngIf="loading" class="btn-spinner" aria-hidden="true">
+    <mat-spinner diameter="16" strokeWidth="2"></mat-spinner>
+  </span>
+  <mat-icon *ngIf="leftIcon && !loading" class="btn-icon" aria-hidden="true">{{ leftIcon }}</mat-icon>
+  <span [class.sr-only]="variant === 'icon-only'" class="btn-label">
+    <ng-content></ng-content>
+  </span>
+  <mat-icon *ngIf="rightIcon && !loading" class="btn-icon" aria-hidden="true">{{ rightIcon }}</mat-icon>
+</button>

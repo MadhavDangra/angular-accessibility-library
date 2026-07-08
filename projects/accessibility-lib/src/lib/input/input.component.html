@@ -1,0 +1,75 @@
+<div class="field" [class.field--error]="hasError" [class.field--disabled]="disabled">
+
+  <label [for]="fieldId" class="field-label">
+    {{ label }}
+    <span *ngIf="required" aria-hidden="true" class="required-star"> *</span>
+    <span *ngIf="required" class="sr-only">(required)</span>
+  </label>
+
+  <p *ngIf="hint" [id]="hintId" class="field-hint">{{ hint }}</p>
+
+  <!-- Textarea -->
+  <textarea *ngIf="type === 'textarea'"
+    [id]="fieldId" [name]="name" [placeholder]="placeholder"
+    [disabled]="disabled"
+    [attr.aria-required]="required || null"
+    [attr.aria-invalid]="hasError || null"
+    [attr.aria-describedby]="ariaDescribedBy"
+    [value]="value" (input)="onInput($event)" (blur)="onTouched()"
+    class="field-control field-textarea" rows="4"
+  ></textarea>
+
+  <!-- Select -->
+  <div *ngIf="type === 'select'" class="field-select-wrap">
+    <select [id]="fieldId" [name]="name" [disabled]="disabled"
+      [attr.aria-required]="required || null"
+      [attr.aria-invalid]="hasError || null"
+      [attr.aria-describedby]="ariaDescribedBy"
+      (change)="onSelectChange($event)" (blur)="onTouched()"
+      class="field-control field-select">
+      <option value="" disabled [selected]="!value">{{ placeholder || 'Select…' }}</option>
+      <option *ngFor="let opt of options" [value]="opt.value"
+        [disabled]="opt.disabled || false" [selected]="opt.value === value">
+        {{ opt.label }}
+      </option>
+    </select>
+    <mat-icon class="select-arrow" aria-hidden="true">expand_more</mat-icon>
+  </div>
+
+  <!-- Password with toggle -->
+  <div *ngIf="type === 'password'" class="field-input-wrap">
+    <input [id]="fieldId" [type]="showPw ? 'text' : 'password'"
+      [name]="name" [placeholder]="placeholder" [disabled]="disabled"
+      [attr.aria-required]="required || null"
+      [attr.aria-invalid]="hasError || null"
+      [attr.aria-describedby]="ariaDescribedBy"
+      [value]="value" (input)="onInput($event)" (blur)="onTouched()"
+      class="field-control" autocomplete="current-password" />
+    <button type="button" class="pw-toggle"
+      (click)="showPw = !showPw"
+      [attr.aria-label]="showPw ? 'Hide password' : 'Show password'"
+      [attr.aria-pressed]="showPw">
+      <mat-icon aria-hidden="true">{{ showPw ? 'visibility_off' : 'visibility' }}</mat-icon>
+    </button>
+  </div>
+
+  <!-- Default text / email / number / search -->
+  <div *ngIf="type !== 'textarea' && type !== 'select' && type !== 'password'"
+    class="field-input-wrap">
+    <mat-icon *ngIf="prefixIcon" class="field-prefix" aria-hidden="true">{{ prefixIcon }}</mat-icon>
+    <input [id]="fieldId" [type]="type" [name]="name"
+      [placeholder]="placeholder" [disabled]="disabled"
+      [attr.aria-required]="required || null"
+      [attr.aria-invalid]="hasError || null"
+      [attr.aria-describedby]="ariaDescribedBy"
+      [value]="value" (input)="onInput($event)" (blur)="onTouched()"
+      class="field-control" [class.has-prefix]="!!prefixIcon" />
+  </div>
+
+  <!-- Error (live region) -->
+  <p *ngIf="hasError && errorMessage" [id]="errorId"
+    class="field-error" role="alert" aria-live="assertive">
+    <mat-icon aria-hidden="true">error_outline</mat-icon>
+    {{ errorMessage }}
+  </p>
+</div>

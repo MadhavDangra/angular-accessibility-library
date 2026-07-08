@@ -1,0 +1,31 @@
+<div *ngIf="open" class="modal-backdrop" (click)="closeOnBackdrop && close()" aria-hidden="true"></div>
+
+<div *ngIf="open" #dialogEl role="dialog"
+  [attr.aria-modal]="true"
+  [attr.aria-labelledby]="titleId"
+  [attr.aria-describedby]="bodyId"
+  [class]="'modal-dialog modal--' + size"
+  (keydown)="onKeydown($event)" tabindex="-1">
+
+  <div class="modal-header">
+    <div class="modal-title-row">
+      <mat-icon *ngIf="icon" class="modal-icon" aria-hidden="true">{{ icon }}</mat-icon>
+      <h2 [id]="titleId" class="modal-title">{{ title }}</h2>
+    </div>
+    <button type="button" class="modal-close" (click)="close()" aria-label="Close dialog">
+      <mat-icon aria-hidden="true">close</mat-icon>
+    </button>
+  </div>
+
+  <div [id]="bodyId" class="modal-body">
+    <ng-content></ng-content>
+  </div>
+
+  <div *ngIf="showFooter" class="modal-footer">
+    <ng-content select="[slot=footer]"></ng-content>
+    <ng-container *ngIf="!hasFooterContent">
+      <a11y-button variant="ghost" (clicked)="close()">Cancel</a11y-button>
+      <a11y-button variant="primary" (clicked)="confirmed.emit()">Confirm</a11y-button>
+    </ng-container>
+  </div>
+</div>

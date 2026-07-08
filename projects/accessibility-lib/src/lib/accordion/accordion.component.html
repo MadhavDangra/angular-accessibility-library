@@ -1,0 +1,43 @@
+<div class="accordion" [class.accordion--single]="!allowMultiple">
+  <div
+    *ngFor="let item of items; let i = index"
+    class="accordion-item"
+    [class.accordion-item--open]="isOpen(item.id)"
+    [class.accordion-item--disabled]="item.disabled"
+  >
+    <!-- Trigger (heading + button pattern) -->
+    <h3 class="accordion-heading">
+      <button
+        type="button"
+        class="accordion-trigger"
+        [id]="triggerId(item.id)"
+        [attr.aria-expanded]="isOpen(item.id)"
+        [attr.aria-controls]="panelId(item.id)"
+        [attr.aria-disabled]="item.disabled || null"
+        [disabled]="item.disabled || null"
+        (click)="toggle(item.id)"
+        (keydown)="onKeydown($event, i)"
+      >
+        <span class="trigger-left">
+          <mat-icon *ngIf="item.icon" class="trigger-icon" aria-hidden="true">{{ item.icon }}</mat-icon>
+          {{ item.title }}
+        </span>
+        <mat-icon class="chevron" [class.chevron--open]="isOpen(item.id)" aria-hidden="true">
+          expand_more
+        </mat-icon>
+      </button>
+    </h3>
+
+    <!-- Panel -->
+    <div
+      role="region"
+      [id]="panelId(item.id)"
+      [attr.aria-labelledby]="triggerId(item.id)"
+      [@slideDown]="isOpen(item.id) ? 'open' : 'closed'"
+      class="accordion-panel"
+      [attr.hidden]="isOpen(item.id) ? null : true"
+    >
+      <div class="panel-inner">{{ item.content }}</div>
+    </div>
+  </div>
+</div>

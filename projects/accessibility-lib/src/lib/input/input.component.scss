@@ -1,0 +1,30 @@
+.field { display:flex; flex-direction:column; gap:.25rem; width:100%; }
+.field-label { font-size:.875rem; font-weight:600; color:var(--a11y-color-ink); }
+.required-star { color:var(--a11y-color-danger); }
+.field-hint { margin:0; font-size:.8rem; color:var(--a11y-color-ink-muted); }
+.field-input-wrap, .field-select-wrap { position:relative; display:flex; align-items:center; }
+.field-control {
+  width:100%; min-height:44px; padding:.625rem .875rem;
+  border:2px solid var(--a11y-color-border); border-radius:var(--a11y-radius-sm);
+  font-family:var(--a11y-font-sans); font-size:.9rem; color:var(--a11y-color-ink);
+  background:var(--a11y-color-surface); transition:border-color 150ms, box-shadow 150ms;
+  appearance:none; -webkit-appearance:none;
+  &:focus-visible { outline:none; border-color:var(--a11y-color-focus); box-shadow:0 0 0 3px rgba(99,102,241,.2); }
+  &::placeholder { color:var(--a11y-color-ink-muted); opacity:.7; }
+  &:disabled { background:#f9fafb; opacity:.6; cursor:not-allowed; }
+}
+.field-textarea { min-height:100px; resize:vertical; line-height:1.5; }
+.field-select { padding-right:2.5rem; cursor:pointer; }
+.select-arrow { position:absolute; right:.625rem; color:var(--a11y-color-ink-muted); pointer-events:none; font-size:20px; }
+.field-prefix { position:absolute; left:.75rem; color:var(--a11y-color-ink-muted); font-size:18px; pointer-events:none; }
+.field-control.has-prefix { padding-left:2.5rem; }
+.pw-toggle { position:absolute; right:.5rem; background:none; border:none; cursor:pointer;
+  color:var(--a11y-color-ink-muted); padding:.25rem; border-radius:4px; display:flex;
+  &:focus-visible { outline:3px solid var(--a11y-color-focus); outline-offset:2px; }
+  &:hover { color:var(--a11y-color-ink); } }
+.field-error { display:flex; align-items:center; gap:.375rem; margin:.125rem 0 0;
+  font-size:.8rem; color:var(--a11y-color-danger); font-weight:500;
+  mat-icon { font-size:16px; width:16px; height:16px; flex-shrink:0; } }
+.field--error .field-control { border-color:var(--a11y-color-danger); }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px;
+           overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }

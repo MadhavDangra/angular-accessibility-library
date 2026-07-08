@@ -1,0 +1,38 @@
+<div class="tabs-root">
+
+  <!-- Tablist -->
+  <div role="tablist" [attr.aria-label]="ariaLabel" class="tab-list">
+    <button
+      *ngFor="let tab of tabList; let i = index"
+      role="tab"
+      type="button"
+      [id]="tabId(i)"
+      [attr.aria-selected]="activeIndex === i"
+      [attr.aria-controls]="panelId(i)"
+      [attr.aria-disabled]="tab.disabled || null"
+      [attr.tabindex]="activeIndex === i ? 0 : -1"
+      [class.tab--active]="activeIndex === i"
+      [class.tab--disabled]="tab.disabled"
+      class="tab-btn"
+      (click)="!tab.disabled && select(i)"
+      (keydown)="onKeydown($event, i)"
+    >
+      <mat-icon *ngIf="tab.icon" class="tab-icon" aria-hidden="true">{{ tab.icon }}</mat-icon>
+      {{ tab.label }}
+    </button>
+  </div>
+
+  <!-- Panels -->
+  <div
+    *ngFor="let tab of tabList; let i = index"
+    role="tabpanel"
+    [id]="panelId(i)"
+    [attr.aria-labelledby]="tabId(i)"
+    tabindex="0"
+    class="tab-panel"
+    [style.display]="activeIndex === i ? '' : 'none'"
+  >
+    <ng-container *ngTemplateOutlet="tab.content"></ng-container>
+  </div>
+
+</div>

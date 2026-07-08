@@ -1,0 +1,32 @@
+<!-- WCAG: polite live region wraps all toasts; individual errors use assertive -->
+<div
+  class="toast-region"
+  aria-label="Notifications"
+  [attr.aria-live]="'polite'"
+  aria-atomic="false"
+  aria-relevant="additions removals"
+>
+  <div
+    *ngFor="let toast of toasts; trackBy: trackById"
+    [@toastAnim]
+    class="toast"
+    [class]="'toast--' + toast.type"
+    [attr.role]="toast.type === 'error' ? 'alert' : 'status'"
+    [attr.aria-live]="toast.type === 'error' ? 'assertive' : 'polite'"
+    (keydown.escape)="dismiss(toast.id)"
+  >
+    <mat-icon class="toast-icon" aria-hidden="true">{{ iconFor(toast.type) }}</mat-icon>
+    <span class="toast-msg">{{ toast.message }}</span>
+
+    <button *ngIf="toast.action" type="button" class="toast-action"
+      (click)="action.emit({ toast, label: toast.action! })">
+      {{ toast.action }}
+    </button>
+
+    <button type="button" class="toast-close"
+      (click)="dismiss(toast.id)"
+      [attr.aria-label]="'Dismiss: ' + toast.message">
+      <mat-icon aria-hidden="true">close</mat-icon>
+    </button>
+  </div>
+</div>

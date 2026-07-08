@@ -1,0 +1,7 @@
+{
+  "extends": "./projects/accessibility-lib/tsconfig.spec.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node"
+  }
+}

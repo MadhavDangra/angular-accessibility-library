@@ -1,0 +1,48 @@
+{
+  "name": "angular-accessibility-library",
+  "version": "1.0.0",
+  "description": "WCAG 2.1/2.2 compliant Angular component library",
+  "scripts": {
+    "start": "ng serve demo-app --open",
+    "build": "ng build demo-app",
+    "build:lib": "ng build accessibility-lib",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:e2e": "ng e2e demo-app",
+    "storybook": "storybook dev -p 6006 -c projects/storybook/.storybook",
+    "build:storybook": "storybook build -c projects/storybook/.storybook",
+    "lint": "ng lint"
+  },
+  "dependencies": {
+    "@angular/animations": "^17.3.0",
+    "@angular/cdk": "^17.3.0",
+    "@angular/common": "^17.3.0",
+    "@angular/compiler": "^17.3.0",
+    "@angular/core": "^17.3.0",
+    "@angular/forms": "^17.3.0",
+    "@angular/material": "^17.3.0",
+    "@angular/platform-browser": "^17.3.0",
+    "@angular/platform-browser-dynamic": "^17.3.0",
+    "@angular/router": "^17.3.0",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.6.0",
+    "zone.js": "~0.14.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^17.3.0",
+    "@angular/cli": "^17.3.0",
+    "@angular/compiler-cli": "^17.3.0",
+    "@chromatic-com/storybook": "^1.0.0",
+    "@storybook/addon-a11y": "^8.0.0",
+    "@storybook/addon-essentials": "^8.0.0",
+    "@storybook/angular": "^8.0.0",
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jest-preset-angular": "^14.1.0",
+    "ng-packagr": "^17.3.0",
+    "storybook": "^8.0.0",
+    "typescript": "~5.4.2"
+  }
+}
