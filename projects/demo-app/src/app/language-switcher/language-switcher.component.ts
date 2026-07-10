@@ -13,14 +13,8 @@ import { AppLang, TranslationService } from '../i18n/translation.service';
   selector: 'app-language-switcher',
   standalone: true,
   imports: [CommonModule, A11yDropdownComponent],
-  template: `
-    <a11y-dropdown
-      [triggerLabel]="triggerLabel()"
-      triggerIcon="translate"
-      [items]="langItems"
-      (itemSelected)="onSelect($event)"
-    ></a11y-dropdown>
-  `,
+  templateUrl: './language-switcher.component.html',
+  styleUrl: './language-switcher.component.scss',
 })
 export class LanguageSwitcherComponent {
   private i18n = inject(TranslationService);

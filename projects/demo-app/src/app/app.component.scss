@@ -1,0 +1,34 @@
+kbd {
+  display: inline-block;
+  padding: .1em .4em;
+  border: 1px solid var(--a11y-color-border);
+  border-radius: 4px;
+  font-family: var(--a11y-font-mono);
+  font-size: .8em;
+  background: #f9fafb;
+}
+
+ul {
+  padding-left: 1.25rem;
+  line-height: 2;
+  margin: .5rem 0;
+}
+
+.lang-switcher-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.form-success {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  color: #166534;
+  font-weight: 600;
+  font-size: .9rem;
+
+  mat-icon {
+    color: #22c55e;
+  }
+}
