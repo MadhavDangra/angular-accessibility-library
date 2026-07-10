@@ -1,10 +1,10 @@
 <div class="table-wrap" [attr.aria-busy]="loading || null">
   <div *ngIf="loading" class="table-overlay" role="status" aria-live="polite">
     <span class="spinner" aria-hidden="true"></span>
-    <span class="sr-only">Loading table data…</span>
+    <span class="sr-only">{{ loadingLabel }}</span>
   </div>
 
-  <div class="table-scroll" tabindex="0" [attr.aria-label]="'Scrollable: ' + tableLabel">
+  <div class="table-scroll" tabindex="0" [attr.aria-label]="scrollableLabelFn(tableLabel)">
     <table role="grid"
       [attr.aria-label]="tableLabel"
       [attr.aria-multiselectable]="selectable || null"
@@ -15,7 +15,7 @@
         <tr role="row">
           <th *ngIf="selectable" scope="col" role="columnheader" class="col-check">
             <mat-checkbox [checked]="allSelected" [indeterminate]="someSelected"
-              (change)="toggleAll()" aria-label="Select all rows" color="primary">
+              (change)="toggleAll()" [attr.aria-label]="selectAllLabel" color="primary">
             </mat-checkbox>
           </th>
           <th *ngFor="let col of columns; trackBy: trackByKey" scope="col" role="columnheader"
@@ -53,7 +53,7 @@
           [attr.tabindex]="selectable ? 0 : null">
           <td *ngIf="selectable" class="col-check" role="gridcell">
             <mat-checkbox [checked]="isSelected(row)" (change)="toggleRow(row)"
-              [attr.aria-label]="'Select row ' + (i+1)" color="primary"
+              [attr.aria-label]="selectRowLabelFn(i+1)" color="primary"
               (click)="$event.stopPropagation()">
             </mat-checkbox>
           </td>
@@ -77,6 +77,6 @@
 
   <p *ngIf="selectable && selectedRows.size > 0" class="selection-bar"
     aria-live="polite" aria-atomic="true">
-    {{ selectedRows.size }} row{{ selectedRows.size !== 1 ? 's' : '' }} selected
+    {{ selectionCountLabelFn(selectedRows.size) }}
   </p>
 </div>

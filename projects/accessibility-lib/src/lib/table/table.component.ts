@@ -47,6 +47,16 @@ export class A11yTableComponent {
   @Input() emptyMessage = 'No data available.';
   @Input() rowIdKey = 'id';
 
+  /** i18n-overridable strings — defaults preserve existing English behavior. */
+  @Input() loadingLabel = 'Loading table data…';
+  @Input() selectAllLabel = 'Select all rows';
+  @Input() selectRowLabelFn: (row: number) => string = (row) => `Select row ${row}`;
+  @Input() scrollableLabelFn: (label: string) => string = (label) => `Scrollable: ${label}`;
+  @Input() sortAscendingLabelFn: (column: string) => string = (column) => `Sort by ${column}, ascending`;
+  @Input() sortDescendingLabelFn: (column: string) => string = (column) => `Sort by ${column}, descending`;
+  @Input() selectionCountLabelFn: (count: number) => string =
+    (count) => `${count} row${count !== 1 ? 's' : ''} selected`;
+
   @Output() sortChanged      = new EventEmitter<SortEvent>();
   @Output() selectionChanged = new EventEmitter<Record<string, any>[]>();
 
@@ -96,8 +106,10 @@ export class A11yTableComponent {
   }
 
   getSortLabel(col: TableColumn): string {
-    if (this.sortCol !== col.key) return `Sort by ${col.label}, ascending`;
-    return this.sortDir === 'asc' ? `Sort by ${col.label}, descending` : `Sort by ${col.label}, ascending`;
+    if (this.sortCol !== col.key) return this.sortAscendingLabelFn(col.label);
+    return this.sortDir === 'asc'
+      ? this.sortDescendingLabelFn(col.label)
+      : this.sortAscendingLabelFn(col.label);
   }
 
   trackByKey: TrackByFunction<TableColumn> = (_, c) => c.key;

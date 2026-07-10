@@ -51,6 +51,12 @@ export class A11yInputComponent implements ControlValueAccessor, OnInit {
   @Input() options: SelectOption[] = [];
   @Input() fieldId = `a11y-input-${Math.random().toString(36).slice(2, 7)}`;
 
+  /** i18n-overridable strings — defaults preserve existing English behavior. */
+  @Input() requiredIndicatorText = '(required)';
+  @Input() selectPlaceholderLabel = 'Select…';
+  @Input() showPasswordLabel = 'Show password';
+  @Input() hidePasswordLabel = 'Hide password';
+
   value: string | number = '';
   showPw = false;
 

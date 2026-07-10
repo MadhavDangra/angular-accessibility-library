@@ -72,6 +72,10 @@ export class A11yToastService {
 export class A11yToastContainerComponent implements OnInit, OnDestroy {
   @Output() action = new EventEmitter<{ toast: Toast; label: string }>();
 
+  /** i18n-overridable strings — defaults preserve existing English behavior. */
+  @Input() regionAriaLabel = 'Notifications';
+  @Input() dismissLabelFn: (message: string) => string = (message) => `Dismiss: ${message}`;
+
   toasts: Toast[] = [];
   private timers = new Map<string, ReturnType<typeof setTimeout>>();
   private sub: any;

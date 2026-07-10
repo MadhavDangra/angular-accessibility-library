@@ -3,7 +3,7 @@
   <label [for]="fieldId" class="field-label">
     {{ label }}
     <span *ngIf="required" aria-hidden="true" class="required-star"> *</span>
-    <span *ngIf="required" class="sr-only">(required)</span>
+    <span *ngIf="required" class="sr-only">{{ requiredIndicatorText }}</span>
   </label>
 
   <p *ngIf="hint" [id]="hintId" class="field-hint">{{ hint }}</p>
@@ -27,7 +27,7 @@
       [attr.aria-describedby]="ariaDescribedBy"
       (change)="onSelectChange($event)" (blur)="onTouched()"
       class="field-control field-select">
-      <option value="" disabled [selected]="!value">{{ placeholder || 'Select…' }}</option>
+      <option value="" disabled [selected]="!value">{{ placeholder || selectPlaceholderLabel }}</option>
       <option *ngFor="let opt of options" [value]="opt.value"
         [disabled]="opt.disabled || false" [selected]="opt.value === value">
         {{ opt.label }}
@@ -47,7 +47,7 @@
       class="field-control" autocomplete="current-password" />
     <button type="button" class="pw-toggle"
       (click)="showPw = !showPw"
-      [attr.aria-label]="showPw ? 'Hide password' : 'Show password'"
+      [attr.aria-label]="showPw ? hidePasswordLabel : showPasswordLabel"
       [attr.aria-pressed]="showPw">
       <mat-icon aria-hidden="true">{{ showPw ? 'visibility_off' : 'visibility' }}</mat-icon>
     </button>

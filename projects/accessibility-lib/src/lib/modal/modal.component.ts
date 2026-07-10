@@ -37,6 +37,11 @@ export class A11yModalComponent implements OnChanges, AfterViewInit, OnDestroy {
   @Input() icon = '';
   @Input() hasFooterContent = false;
 
+  /** i18n-overridable strings — defaults preserve existing English behavior. */
+  @Input() closeAriaLabel = 'Close dialog';
+  @Input() cancelLabel = 'Cancel';
+  @Input() confirmLabel = 'Confirm';
+
   @Output() closed    = new EventEmitter<void>();
   @Output() confirmed = new EventEmitter<void>();
 

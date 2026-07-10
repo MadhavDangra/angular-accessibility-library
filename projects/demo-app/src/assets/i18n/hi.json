@@ -1,0 +1,299 @@
+{
+  "meta": {
+    "pageTitle": "एक्सेसिबिलिटी कॉम्पोनेंट लाइब्रेरी — डेमो",
+    "pageDescription": "WCAG 2.1/2.2 एंगुलर कॉम्पोनेंट लाइब्रेरी शोकेस"
+  },
+  "common": {
+    "skipToMain": "मुख्य सामग्री पर जाएं",
+    "cancel": "रद्द करें",
+    "confirm": "पुष्टि करें",
+    "close": "डायलॉग बंद करें",
+    "save": "बदलाव सहेजें"
+  },
+  "library": {
+    "input": {
+      "requiredIndicator": "(आवश्यक)",
+      "selectPlaceholder": "चुनें…",
+      "showPassword": "पासवर्ड दिखाएं",
+      "hidePassword": "पासवर्ड छुपाएं"
+    },
+    "modal": {
+      "defaultTitle": "डायलॉग",
+      "closeAriaLabel": "डायलॉग बंद करें",
+      "cancel": "रद्द करें",
+      "confirm": "पुष्टि करें"
+    },
+    "table": {
+      "defaultTableLabel": "डेटा टेबल",
+      "defaultEmptyMessage": "कोई डेटा उपलब्ध नहीं है।",
+      "loading": "टेबल डेटा लोड हो रहा है…",
+      "selectAllAriaLabel": "सभी पंक्तियाँ चुनें",
+      "selectRowAriaLabel": "पंक्ति {{row}} चुनें",
+      "scrollableAriaLabel": "स्क्रॉल करने योग्य: {{label}}",
+      "sortAscending": "{{column}} के अनुसार क्रमबद्ध करें, आरोही",
+      "sortDescending": "{{column}} के अनुसार क्रमबद्ध करें, अवरोही",
+      "rowsSelected": "{{count}} पंक्ति चयनित",
+      "rowsSelected_plural": "{{count}} पंक्तियाँ चयनित"
+    },
+    "toast": {
+      "regionAriaLabel": "सूचनाएं",
+      "dismissAriaLabel": "हटाएं: {{message}}"
+    },
+    "dropdown": {
+      "defaultTriggerLabel": "विकल्प"
+    }
+  },
+  "demo": {
+    "hero": {
+      "titlePrefix": "एंगुलर",
+      "titleEmphasis": "एक्सेसिबिलिटी",
+      "titleSuffix": "कॉम्पोनेंट लाइब्रेरी",
+      "subtitle": "8 WCAG 2.1/2.2 AA-अनुरूप कॉम्पोनेंट्स — ARIA, कीबोर्ड नेविगेशन, स्क्रीन रीडर के लिए तैयार।",
+      "badgeRowAriaLabel": "अनुपालन विशेषताएं",
+      "badges": {
+        "wcag21": "WCAG 2.1 AA",
+        "wcag22": "WCAG 2.2",
+        "keyboardNav": "कीबोर्ड नेविगेशन",
+        "screenReader": "स्क्रीन रीडर",
+        "touchTargets": "44 px टारगेट",
+        "contrast": "4.5:1 कंट्रास्ट",
+        "reducedMotion": "कम मोशन"
+      }
+    },
+    "button": {
+      "componentLabel": "कॉम्पोनेंट 01",
+      "title": "बटन",
+      "description": "5 वैरिएंट, 3 आकार, लोडिंग और डिसेबल्ड स्थितियां — सभी में aria-busy, aria-disabled, और 44 px टच टारगेट शामिल हैं।",
+      "variantsSubtitle": "वैरिएंट",
+      "primary": "प्राइमरी",
+      "secondary": "सेकेंडरी",
+      "danger": "डेंजर",
+      "ghost": "घोस्ट",
+      "iconOnlyAriaLabel": "सेटिंग्स",
+      "sizesSubtitle": "आकार",
+      "small": "छोटा",
+      "medium": "मध्यम",
+      "large": "बड़ा",
+      "statesSubtitle": "स्थितियाँ",
+      "uploading": "अपलोड हो रहा है…",
+      "uploadFile": "फ़ाइल अपलोड करें",
+      "disabledPrimary": "डिसेबल्ड प्राइमरी",
+      "disabledSecondary": "डिसेबल्ड सेकेंडरी",
+      "note": "डिसेबल्ड बटन HTML के disabled एट्रिब्यूट के बजाय aria-disabled का उपयोग करते हैं, ताकि वे टैब क्रम में बने रहें और स्क्रीन रीडर द्वारा घोषित किए जाएं।"
+    },
+    "input": {
+      "componentLabel": "कॉम्पोनेंट 02",
+      "title": "इनपुट / फॉर्म फ़ील्ड",
+      "description": "स्पष्ट <label>, aria-describedby के ज़रिए हिंट टेक्स्ट, और वैलिडेशन विफल होने पर लाइव-रीजन एरर घोषणाएं।",
+      "fullName": {
+        "label": "पूरा नाम",
+        "placeholder": "प्रिया शर्मा",
+        "hint": "पहला और अंतिम नाम"
+      },
+      "email": {
+        "label": "ईमेल पता",
+        "placeholder": "you@company.com",
+        "hint": "हम आपका ईमेल कभी साझा नहीं करेंगे"
+      },
+      "password": {
+        "label": "पासवर्ड",
+        "placeholder": "कम से कम 8 अक्षर",
+        "hint": "एक अंक और विशेष चिह्न शामिल करें"
+      },
+      "role": {
+        "label": "भूमिका",
+        "options": {
+          "engineer": "सॉफ्टवेयर इंजीनियर",
+          "designer": "UX डिज़ाइनर",
+          "pm": "प्रोडक्ट मैनेजर",
+          "qa": "QA इंजीनियर",
+          "devrel": "डेवलपर रिलेशंस"
+        }
+      },
+      "bio": {
+        "label": "बायो",
+        "placeholder": "अपने बारे में बताएं…",
+        "hint": "वैकल्पिक — अधिकतम 300 अक्षर"
+      },
+      "submit": "सबमिट करें",
+      "reset": "रीसेट करें",
+      "formSuccess": "फॉर्म सफलतापूर्वक सबमिट हुआ!",
+      "note": "एरर role=\"alert\" + aria-live=\"assertive\" का उपयोग करते हैं ताकि स्क्रीन रीडर ब्लर होते ही तुरंत बीच में आकर उन्हें घोषित करें।",
+      "errors": {
+        "required": "{{field}} आवश्यक है।",
+        "email": "एक मान्य ईमेल पता दर्ज करें।",
+        "minlength": "कम से कम {{length}} अक्षर होने चाहिए।",
+        "invalid": "अमान्य मान।",
+        "formHasErrors": "फॉर्म में त्रुटियाँ हैं। कृपया हाइलाइट किए गए फ़ील्ड सुधारें।",
+        "fixFormErrors": "सबमिट करने से पहले कृपया फॉर्म की त्रुटियाँ ठीक करें।"
+      },
+      "fieldLabels": {
+        "name": "पूरा नाम",
+        "email": "ईमेल",
+        "password": "पासवर्ड",
+        "role": "भूमिका"
+      }
+    },
+    "modal": {
+      "componentLabel": "कॉम्पोनेंट 03",
+      "title": "मॉडल / डायलॉग",
+      "description": "फोकस ट्रैप, Escape से बंद करें, बंद करने पर फोकस पुनर्स्थापन, aria-modal, aria-labelledby, aria-describedby।",
+      "infoDialog": "जानकारी डायलॉग",
+      "confirmDelete": "डिलीट की पुष्टि करें",
+      "formInModal": "मॉडल में फॉर्म",
+      "fullscreen": "फुलस्क्रीन",
+      "note": "Tab / Shift+Tab केवल डायलॉग के भीतर घूमते हैं। बंद करने पर फोकस ट्रिगर करने वाले बटन पर लौटता है — WCAG 2.4.3।"
+    },
+    "table": {
+      "componentLabel": "कॉम्पोनेंट 04",
+      "title": "डेटा टेबल",
+      "description": "क्रमबद्ध किए जा सकने वाले कॉलम पर aria-sort, पंक्ति चयन के लिए aria-selected, aria-multiselectable, चयन संख्या के लिए लाइव स्टेटस।",
+      "tableLabel": "टीम सदस्य",
+      "columns": {
+        "name": "नाम",
+        "role": "भूमिका",
+        "department": "विभाग",
+        "status": "स्थिति",
+        "joined": "शामिल हुए"
+      },
+      "roles": {
+        "leadEngineer": "लीड इंजीनियर",
+        "uxDesigner": "UX डिज़ाइनर",
+        "productManager": "प्रोडक्ट मैनेजर",
+        "backendEngineer": "बैकएंड इंजीनियर",
+        "qaEngineer": "QA इंजीनियर",
+        "devrelEngineer": "DevRel इंजीनियर"
+      },
+      "departments": {
+        "platform": "प्लेटफ़ॉर्म",
+        "design": "डिज़ाइन",
+        "product": "प्रोडक्ट",
+        "quality": "क्वालिटी",
+        "community": "कम्युनिटी"
+      },
+      "statuses": {
+        "active": "सक्रिय",
+        "pending": "लंबित",
+        "inactive": "निष्क्रिय"
+      },
+      "sortedAnnouncement": "{{column}} के अनुसार क्रमबद्ध, {{direction}}",
+      "ascending": "आरोही",
+      "descending": "अवरोही",
+      "rowsSelectedAnnouncement": "{{count}} पंक्ति चयनित",
+      "rowsSelectedAnnouncement_plural": "{{count}} पंक्तियाँ चयनित"
+    },
+    "tabs": {
+      "componentLabel": "कॉम्पोनेंट 05",
+      "title": "टैब्स",
+      "description": "WAI-ARIA टैब्स पैटर्न — एरो कीज़ से नेविगेट करें, aria-selected, role=\"tabpanel\", डिसेबल्ड टैब छोड़ दिए जाते हैं।",
+      "ariaLabel": "फीचर टैब्स",
+      "overview": {
+        "label": "अवलोकन",
+        "paragraph1": "अवलोकन पैनल। टैब्स के बीच जाने के लिए एरो कीज़ दबाएं। पैनल की सामग्री में फोकस ले जाने के लिए Tab दबाएं।",
+        "paragraph2": "सभी टैब ट्रिगर role=\"tab\" का उपयोग करते हैं, और पैनल role=\"tabpanel\" के साथ aria-labelledby का उपयोग करते हैं।"
+      },
+      "keyboardShortcuts": {
+        "label": "कीबोर्ड शॉर्टकट",
+        "item1": "टैब्स के बीच जाएं",
+        "item2Home": "पहला टैब",
+        "item2End": "आख़िरी टैब",
+        "item3": "पैनल की सामग्री में जाएं"
+      },
+      "wcagCriteria": {
+        "label": "WCAG मापदंड",
+        "paragraph": "इसमें 2.1.1 कीबोर्ड, 1.3.1 जानकारी और संबंध, 4.1.2 नाम/भूमिका/मान, 2.4.7 फोकस विज़िबल शामिल हैं।"
+      },
+      "disabled": {
+        "label": "डिसेबल्ड",
+        "paragraph": "यह सामग्री उपलब्ध नहीं है क्योंकि टैब डिसेबल है।"
+      },
+      "note": "एरो का उपयोग करते समय डिसेबल्ड टैब छोड़ दिए जाते हैं। केवल सक्रिय टैब में tabindex=\"0\" होता है; निष्क्रिय टैब tabindex=\"-1\" का उपयोग करते हैं।"
+    },
+    "accordion": {
+      "componentLabel": "कॉम्पोनेंट 06",
+      "title": "अकॉर्डियन",
+      "description": "aria-expanded, role=\"region\", एनिमेटेड पैनल, ट्रिगर्स के बीच एरो की नेविगेशन।",
+      "items": {
+        "wcag": {
+          "title": "WCAG क्या है?",
+          "content": "वेब कंटेंट एक्सेसिबिलिटी गाइडलाइंस (WCAG) W3C द्वारा विकसित की गई हैं और यह बताती हैं कि विकलांग लोगों के लिए वेब कंटेंट को अधिक सुलभ कैसे बनाया जाए। WCAG 2.1 और 2.2 में POUR सिद्धांत शामिल हैं।"
+        },
+        "keyboard": {
+          "title": "कीबोर्ड एक्सेसिबिलिटी",
+          "content": "सभी इंटरैक्टिव एलिमेंट्स केवल कीबोर्ड से संचालित होने योग्य होने चाहिए। उपयोगकर्ता किसी कॉम्पोनेंट में कीबोर्ड से बाहर निकलने के रास्ते के बिना कभी फंसने नहीं चाहिए।"
+        },
+        "screenReader": {
+          "title": "स्क्रीन रीडर सपोर्ट",
+          "content": "स्क्रीन रीडर सिमेंटिक HTML और ARIA एट्रिब्यूट पर निर्भर करते हैं। हर कॉम्पोनेंट VoiceOver (macOS/iOS) और NVDA (Windows) के साथ टेस्ट किया गया है।"
+        },
+        "contrast": {
+          "title": "रंग कंट्रास्ट आवश्यकताएं",
+          "content": "WCAG 1.4.3 के अनुसार सामान्य टेक्स्ट के लिए ≥4.5:1 कंट्रास्ट आवश्यक है। इस लाइब्रेरी में सभी टोकन इस अनुपात को पूरा करते हैं या उससे अधिक हैं।"
+        }
+      },
+      "note": "हर ट्रिगर aria-expanded + aria-controls का उपयोग करता है। पैनल role=\"region\" + aria-labelledby का उपयोग करते हैं। एरो कीज़ ट्रिगर्स के बीच जाती हैं; डिसेबल्ड आइटम छोड़ दिए जाते हैं।"
+    },
+    "dropdown": {
+      "componentLabel": "कॉम्पोनेंट 07",
+      "title": "ड्रॉपडाउन मेन्यू",
+      "description": "WAI-ARIA मेन्यू बटन पैटर्न — role=\"menu\", aria-haspopup, एरो की नेविगेशन, Escape से बंद करें।",
+      "actionsTrigger": "एक्शन",
+      "exportTrigger": "एक्सपोर्ट",
+      "items": {
+        "edit": "एडिट करें",
+        "duplicate": "डुप्लिकेट करें",
+        "archive": "आर्काइव करें",
+        "delete": "डिलीट करें",
+        "restricted": "प्रतिबंधित (डिसेबल्ड)"
+      },
+      "exportItems": {
+        "csv": "CSV के रूप में एक्सपोर्ट करें",
+        "json": "JSON के रूप में एक्सपोर्ट करें",
+        "pdf": "PDF के रूप में एक्सपोर्ट करें"
+      },
+      "selectedToast": "चयनित: {{label}}",
+      "note": "Escape मेन्यू बंद करता है और फोकस को ट्रिगर पर लौटाता है। डिसेबल्ड आइटम में aria-disabled होता है और वे कीबोर्ड नेविगेशन में छोड़ दिए जाते हैं।"
+    },
+    "toast": {
+      "componentLabel": "कॉम्पोनेंट 08",
+      "title": "टोस्ट / सूचना",
+      "description": "info/success/warning के लिए role=\"status\" (पॉलाइट); एरर के लिए role=\"alert\" (असर्टिव)। एरर टोस्ट स्थायी होते हैं और स्वतः बंद नहीं होते।",
+      "success": "सफलता",
+      "errorPersistent": "एरर (स्थायी)",
+      "warning": "चेतावनी",
+      "info": "जानकारी",
+      "note": "एरर टोस्ट तब तक बने रहते हैं जब तक मैन्युअल रूप से बंद न किया जाए (WCAG 2.2.1)। क्लोज़ बटन 44×44 px का है, जिसमें वर्णनात्मक aria-label है। प्रकार आइकन + लेबल से दर्शाया जाता है — कभी केवल रंग से नहीं (1.4.1)।",
+      "messages": {
+        "success": "बदलाव सफलतापूर्वक सहेजे गए।",
+        "error": "कुछ गड़बड़ हो गई — कृपया फिर से प्रयास करें।",
+        "warning": "आपका सत्र 5 मिनट में समाप्त हो जाएगा।",
+        "info": "ऐप का नया वर्शन उपलब्ध है।"
+      }
+    },
+    "modals": {
+      "info": {
+        "title": "एक्सेसिबिलिटी सिद्धांत",
+        "intro": "यह लाइब्रेरी सभी चार WCAG 2.1 POUR सिद्धांतों को कवर करती है:",
+        "perceivable": { "term": "पर्सीवेबल (अनुभवगम्य)", "desc": "ऑल्ट टेक्स्ट, कंट्रास्ट, टेक्स्ट विकल्प" },
+        "operable": { "term": "ऑपरेबल (संचालन योग्य)", "desc": "पूर्ण कीबोर्ड एक्सेस, कोई ट्रैप नहीं, फोकस प्रबंधन" },
+        "understandable": { "term": "अंडरस्टैंडेबल (समझने योग्य)", "desc": "स्पष्ट लेबल, त्रुटि पहचान, अनुमानित UI" },
+        "robust": { "term": "रोबस्ट (मज़बूत)", "desc": "मान्य HTML, ARIA, वास्तविक स्क्रीन रीडर के साथ टेस्ट किया गया" }
+      },
+      "confirmDelete": {
+        "title": "रिकॉर्ड डिलीट करें",
+        "body": "क्या आप वाकई इस रिकॉर्ड को डिलीट करना चाहते हैं? यह क्रिया वापस नहीं ली जा सकती।",
+        "deletedToast": "रिकॉर्ड डिलीट हो गया।"
+      },
+      "formInModal": {
+        "title": "प्रोफ़ाइल एडिट करें",
+        "displayName": { "label": "प्रदर्शित नाम", "placeholder": "आपका नाम" },
+        "jobTitle": { "label": "पद का नाम", "placeholder": "जैसे फ्रंटएंड इंजीनियर" }
+      },
+      "fullscreen": {
+        "title": "फुलस्क्रीन डायलॉग",
+        "paragraph1": "पूरा व्यूपोर्ट — फोकस अभी भी ट्रैप है और Escape अभी भी बंद करता है।",
+        "paragraph2": "जटिल वर्कफ़्लो या मोबाइल डिवाइस पर ऑनबोर्डिंग फ्लो के लिए उपयोगी।"
+      }
+    }
+  }
+}

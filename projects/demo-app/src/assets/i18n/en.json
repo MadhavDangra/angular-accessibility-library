@@ -1,0 +1,299 @@
+{
+  "meta": {
+    "pageTitle": "Accessibility Component Library — Demo",
+    "pageDescription": "WCAG 2.1/2.2 Angular component library showcase"
+  },
+  "common": {
+    "skipToMain": "Skip to main content",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "close": "Close dialog",
+    "save": "Save Changes"
+  },
+  "library": {
+    "input": {
+      "requiredIndicator": "(required)",
+      "selectPlaceholder": "Select…",
+      "showPassword": "Show password",
+      "hidePassword": "Hide password"
+    },
+    "modal": {
+      "defaultTitle": "Dialog",
+      "closeAriaLabel": "Close dialog",
+      "cancel": "Cancel",
+      "confirm": "Confirm"
+    },
+    "table": {
+      "defaultTableLabel": "Data table",
+      "defaultEmptyMessage": "No data available.",
+      "loading": "Loading table data…",
+      "selectAllAriaLabel": "Select all rows",
+      "selectRowAriaLabel": "Select row {{row}}",
+      "scrollableAriaLabel": "Scrollable: {{label}}",
+      "sortAscending": "Sort by {{column}}, ascending",
+      "sortDescending": "Sort by {{column}}, descending",
+      "rowsSelected": "{{count}} row selected",
+      "rowsSelected_plural": "{{count}} rows selected"
+    },
+    "toast": {
+      "regionAriaLabel": "Notifications",
+      "dismissAriaLabel": "Dismiss: {{message}}"
+    },
+    "dropdown": {
+      "defaultTriggerLabel": "Options"
+    }
+  },
+  "demo": {
+    "hero": {
+      "titlePrefix": "Angular",
+      "titleEmphasis": "Accessibility",
+      "titleSuffix": "Component Library",
+      "subtitle": "8 WCAG 2.1/2.2 AA-compliant components — ARIA, keyboard navigation, screen reader ready.",
+      "badgeRowAriaLabel": "Compliance features",
+      "badges": {
+        "wcag21": "WCAG 2.1 AA",
+        "wcag22": "WCAG 2.2",
+        "keyboardNav": "Keyboard Nav",
+        "screenReader": "Screen Reader",
+        "touchTargets": "44 px Targets",
+        "contrast": "4.5:1 Contrast",
+        "reducedMotion": "Reduced Motion"
+      }
+    },
+    "button": {
+      "componentLabel": "Component 01",
+      "title": "Button",
+      "description": "5 variants, 3 sizes, loading and disabled states — all with aria-busy, aria-disabled, and 44 px touch targets.",
+      "variantsSubtitle": "Variants",
+      "primary": "Primary",
+      "secondary": "Secondary",
+      "danger": "Danger",
+      "ghost": "Ghost",
+      "iconOnlyAriaLabel": "Settings",
+      "sizesSubtitle": "Sizes",
+      "small": "Small",
+      "medium": "Medium",
+      "large": "Large",
+      "statesSubtitle": "States",
+      "uploading": "Uploading…",
+      "uploadFile": "Upload File",
+      "disabledPrimary": "Disabled Primary",
+      "disabledSecondary": "Disabled Secondary",
+      "note": "Disabled buttons use aria-disabled (not the HTML disabled attribute) so they remain in the tab order and are announced by screen readers."
+    },
+    "input": {
+      "componentLabel": "Component 02",
+      "title": "Input / Form Field",
+      "description": "Explicit <label>, hint text via aria-describedby, and live-region error announcements on validation failure.",
+      "fullName": {
+        "label": "Full Name",
+        "placeholder": "Priya Sharma",
+        "hint": "First and last name"
+      },
+      "email": {
+        "label": "Email Address",
+        "placeholder": "you@company.com",
+        "hint": "We'll never share your email"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "Min 8 characters",
+        "hint": "Include a number and special character"
+      },
+      "role": {
+        "label": "Role",
+        "options": {
+          "engineer": "Software Engineer",
+          "designer": "UX Designer",
+          "pm": "Product Manager",
+          "qa": "QA Engineer",
+          "devrel": "Developer Relations"
+        }
+      },
+      "bio": {
+        "label": "Bio",
+        "placeholder": "Tell us about yourself…",
+        "hint": "Optional — max 300 characters"
+      },
+      "submit": "Submit",
+      "reset": "Reset",
+      "formSuccess": "Form submitted successfully!",
+      "note": "Errors use role=\"alert\" + aria-live=\"assertive\" so screen readers interrupt and announce them immediately on blur.",
+      "errors": {
+        "required": "{{field}} is required.",
+        "email": "Enter a valid email address.",
+        "minlength": "Must be at least {{length}} characters.",
+        "invalid": "Invalid value.",
+        "formHasErrors": "Form has errors. Please correct the highlighted fields.",
+        "fixFormErrors": "Please fix the form errors before submitting."
+      },
+      "fieldLabels": {
+        "name": "Full Name",
+        "email": "Email",
+        "password": "Password",
+        "role": "Role"
+      }
+    },
+    "modal": {
+      "componentLabel": "Component 03",
+      "title": "Modal / Dialog",
+      "description": "Focus trap, Escape-to-close, focus restoration on dismiss, aria-modal, aria-labelledby, aria-describedby.",
+      "infoDialog": "Info Dialog",
+      "confirmDelete": "Confirm Delete",
+      "formInModal": "Form in Modal",
+      "fullscreen": "Fullscreen",
+      "note": "Tab / Shift+Tab cycle only within the dialog. Focus returns to the triggering button on close — WCAG 2.4.3."
+    },
+    "table": {
+      "componentLabel": "Component 04",
+      "title": "Data Table",
+      "description": "aria-sort on sortable columns, aria-selected for row selection, aria-multiselectable, live status for selection count.",
+      "tableLabel": "Team members",
+      "columns": {
+        "name": "Name",
+        "role": "Role",
+        "department": "Department",
+        "status": "Status",
+        "joined": "Joined"
+      },
+      "roles": {
+        "leadEngineer": "Lead Engineer",
+        "uxDesigner": "UX Designer",
+        "productManager": "Product Manager",
+        "backendEngineer": "Backend Engineer",
+        "qaEngineer": "QA Engineer",
+        "devrelEngineer": "DevRel Engineer"
+      },
+      "departments": {
+        "platform": "Platform",
+        "design": "Design",
+        "product": "Product",
+        "quality": "Quality",
+        "community": "Community"
+      },
+      "statuses": {
+        "active": "Active",
+        "pending": "Pending",
+        "inactive": "Inactive"
+      },
+      "sortedAnnouncement": "Sorted by {{column}}, {{direction}}",
+      "ascending": "ascending",
+      "descending": "descending",
+      "rowsSelectedAnnouncement": "{{count}} row selected",
+      "rowsSelectedAnnouncement_plural": "{{count}} rows selected"
+    },
+    "tabs": {
+      "componentLabel": "Component 05",
+      "title": "Tabs",
+      "description": "WAI-ARIA Tabs pattern — arrow keys navigate, aria-selected, role=\"tabpanel\", disabled tabs skipped.",
+      "ariaLabel": "Feature tabs",
+      "overview": {
+        "label": "Overview",
+        "paragraph1": "Overview panel. Press arrow keys to move between tabs. Press Tab to move focus into the panel content.",
+        "paragraph2": "All tab triggers use role=\"tab\", and panels use role=\"tabpanel\" with aria-labelledby."
+      },
+      "keyboardShortcuts": {
+        "label": "Keyboard Shortcuts",
+        "item1": "Move between tabs",
+        "item2Home": "First tab",
+        "item2End": "Last tab",
+        "item3": "Move into panel content"
+      },
+      "wcagCriteria": {
+        "label": "WCAG Criteria",
+        "paragraph": "Covers 2.1.1 Keyboard, 1.3.1 Info & Relationships, 4.1.2 Name/Role/Value, 2.4.7 Focus Visible."
+      },
+      "disabled": {
+        "label": "Disabled",
+        "paragraph": "This content is inaccessible because the tab is disabled."
+      },
+      "note": "Disabled tabs are skipped when arrowing. Only the active tab has tabindex=\"0\"; inactive tabs use tabindex=\"-1\"."
+    },
+    "accordion": {
+      "componentLabel": "Component 06",
+      "title": "Accordion",
+      "description": "aria-expanded, role=\"region\", animated panels, arrow key navigation between triggers.",
+      "items": {
+        "wcag": {
+          "title": "What is WCAG?",
+          "content": "The Web Content Accessibility Guidelines (WCAG) are developed by the W3C and define how to make web content more accessible to people with disabilities. WCAG 2.1 and 2.2 cover the POUR principles."
+        },
+        "keyboard": {
+          "title": "Keyboard accessibility",
+          "content": "All interactive elements must be operable via keyboard alone. Users should never be trapped in a component without a keyboard exit."
+        },
+        "screenReader": {
+          "title": "Screen reader support",
+          "content": "Screen readers rely on semantic HTML and ARIA attributes. Every component is tested with VoiceOver (macOS/iOS) and NVDA (Windows)."
+        },
+        "contrast": {
+          "title": "Colour contrast requirements",
+          "content": "WCAG 1.4.3 requires ≥4.5:1 contrast for normal text. All tokens in this library meet or exceed this ratio."
+        }
+      },
+      "note": "Each trigger uses aria-expanded + aria-controls. Panels use role=\"region\" + aria-labelledby. Arrow keys move between triggers; disabled items are skipped."
+    },
+    "dropdown": {
+      "componentLabel": "Component 07",
+      "title": "Dropdown Menu",
+      "description": "WAI-ARIA Menu Button pattern — role=\"menu\", aria-haspopup, arrow key navigation, Escape-to-close.",
+      "actionsTrigger": "Actions",
+      "exportTrigger": "Export",
+      "items": {
+        "edit": "Edit",
+        "duplicate": "Duplicate",
+        "archive": "Archive",
+        "delete": "Delete",
+        "restricted": "Restricted (disabled)"
+      },
+      "exportItems": {
+        "csv": "Export as CSV",
+        "json": "Export as JSON",
+        "pdf": "Export as PDF"
+      },
+      "selectedToast": "Selected: {{label}}",
+      "note": "Escape closes and returns focus to the trigger. Disabled items have aria-disabled and are skipped in keyboard navigation."
+    },
+    "toast": {
+      "componentLabel": "Component 08",
+      "title": "Toast / Notification",
+      "description": "role=\"status\" (polite) for info/success/warning; role=\"alert\" (assertive) for errors. Error toasts are persistent and never auto-dismiss.",
+      "success": "Success",
+      "errorPersistent": "Error (persistent)",
+      "warning": "Warning",
+      "info": "Info",
+      "note": "Error toasts persist until manually dismissed (WCAG 2.2.1). The close button is 44×44 px with a descriptive aria-label. Type is conveyed via icon + label — never colour alone (1.4.1).",
+      "messages": {
+        "success": "Changes saved successfully.",
+        "error": "Something went wrong — please try again.",
+        "warning": "Your session will expire in 5 minutes.",
+        "info": "A new version of the app is available."
+      }
+    },
+    "modals": {
+      "info": {
+        "title": "Accessibility Principles",
+        "intro": "This library covers all four WCAG 2.1 POUR principles:",
+        "perceivable": { "term": "Perceivable", "desc": "Alt text, contrast, text alternatives" },
+        "operable": { "term": "Operable", "desc": "Full keyboard access, no traps, focus management" },
+        "understandable": { "term": "Understandable", "desc": "Clear labels, error identification, predictable UI" },
+        "robust": { "term": "Robust", "desc": "Valid HTML, ARIA, tested with real screen readers" }
+      },
+      "confirmDelete": {
+        "title": "Delete Record",
+        "body": "Are you sure you want to delete this record? This action cannot be undone.",
+        "deletedToast": "Record deleted."
+      },
+      "formInModal": {
+        "title": "Edit Profile",
+        "displayName": { "label": "Display Name", "placeholder": "Your name" },
+        "jobTitle": { "label": "Job Title", "placeholder": "e.g. Frontend Engineer" }
+      },
+      "fullscreen": {
+        "title": "Fullscreen Dialog",
+        "paragraph1": "Full viewport — focus is still trapped and Escape still closes.",
+        "paragraph2": "Useful for complex workflows or onboarding flows on mobile devices."
+      }
+    }
+  }
+}

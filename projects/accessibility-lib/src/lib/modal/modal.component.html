@@ -12,7 +12,7 @@
       <mat-icon *ngIf="icon" class="modal-icon" aria-hidden="true">{{ icon }}</mat-icon>
       <h2 [id]="titleId" class="modal-title">{{ title }}</h2>
     </div>
-    <button type="button" class="modal-close" (click)="close()" aria-label="Close dialog">
+    <button type="button" class="modal-close" (click)="close()" [attr.aria-label]="closeAriaLabel">
       <mat-icon aria-hidden="true">close</mat-icon>
     </button>
   </div>
@@ -24,8 +24,8 @@
   <div *ngIf="showFooter" class="modal-footer">
     <ng-content select="[slot=footer]"></ng-content>
     <ng-container *ngIf="!hasFooterContent">
-      <a11y-button variant="ghost" (clicked)="close()">Cancel</a11y-button>
-      <a11y-button variant="primary" (clicked)="confirmed.emit()">Confirm</a11y-button>
+      <a11y-button variant="ghost" (clicked)="close()">{{ cancelLabel }}</a11y-button>
+      <a11y-button variant="primary" (clicked)="confirmed.emit()">{{ confirmLabel }}</a11y-button>
     </ng-container>
   </div>
 </div>

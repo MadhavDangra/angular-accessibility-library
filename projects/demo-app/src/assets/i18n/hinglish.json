@@ -1,0 +1,299 @@
+{
+  "meta": {
+    "pageTitle": "Accessibility Component Library — Demo",
+    "pageDescription": "WCAG 2.1/2.2 Angular component library ka showcase"
+  },
+  "common": {
+    "skipToMain": "Seedha main content pe jaayein",
+    "cancel": "Cancel karein",
+    "confirm": "Confirm karein",
+    "close": "Dialog band karein",
+    "save": "Changes save karein"
+  },
+  "library": {
+    "input": {
+      "requiredIndicator": "(zaroori)",
+      "selectPlaceholder": "Select karein…",
+      "showPassword": "Password dikhayein",
+      "hidePassword": "Password chupayein"
+    },
+    "modal": {
+      "defaultTitle": "Dialog",
+      "closeAriaLabel": "Dialog band karein",
+      "cancel": "Cancel karein",
+      "confirm": "Confirm karein"
+    },
+    "table": {
+      "defaultTableLabel": "Data table",
+      "defaultEmptyMessage": "Koi data available nahi hai.",
+      "loading": "Table data load ho raha hai…",
+      "selectAllAriaLabel": "Saari rows select karein",
+      "selectRowAriaLabel": "Row {{row}} select karein",
+      "scrollableAriaLabel": "Scroll ho sakta hai: {{label}}",
+      "sortAscending": "{{column}} ke hisaab se sort karein, ascending",
+      "sortDescending": "{{column}} ke hisaab se sort karein, descending",
+      "rowsSelected": "{{count}} row selected hai",
+      "rowsSelected_plural": "{{count}} rows selected hain"
+    },
+    "toast": {
+      "regionAriaLabel": "Notifications",
+      "dismissAriaLabel": "Dismiss karein: {{message}}"
+    },
+    "dropdown": {
+      "defaultTriggerLabel": "Options"
+    }
+  },
+  "demo": {
+    "hero": {
+      "titlePrefix": "Angular",
+      "titleEmphasis": "Accessibility",
+      "titleSuffix": "Component Library",
+      "subtitle": "8 WCAG 2.1/2.2 AA-compliant components — ARIA, keyboard navigation, screen reader ke liye ready.",
+      "badgeRowAriaLabel": "Compliance features",
+      "badges": {
+        "wcag21": "WCAG 2.1 AA",
+        "wcag22": "WCAG 2.2",
+        "keyboardNav": "Keyboard Nav",
+        "screenReader": "Screen Reader",
+        "touchTargets": "44 px Targets",
+        "contrast": "4.5:1 Contrast",
+        "reducedMotion": "Reduced Motion"
+      }
+    },
+    "button": {
+      "componentLabel": "Component 01",
+      "title": "Button",
+      "description": "5 variants, 3 sizes, loading aur disabled states — sabme aria-busy, aria-disabled, aur 44 px touch targets hain.",
+      "variantsSubtitle": "Variants",
+      "primary": "Primary",
+      "secondary": "Secondary",
+      "danger": "Danger",
+      "ghost": "Ghost",
+      "iconOnlyAriaLabel": "Settings",
+      "sizesSubtitle": "Sizes",
+      "small": "Chota",
+      "medium": "Medium",
+      "large": "Bada",
+      "statesSubtitle": "States",
+      "uploading": "Upload ho raha hai…",
+      "uploadFile": "File Upload Karein",
+      "disabledPrimary": "Disabled Primary",
+      "disabledSecondary": "Disabled Secondary",
+      "note": "Disabled buttons HTML ke disabled attribute ki jagah aria-disabled use karte hain, taaki wo tab order mein rahein aur screen reader unhe announce kare."
+    },
+    "input": {
+      "componentLabel": "Component 02",
+      "title": "Input / Form Field",
+      "description": "Explicit <label>, aria-describedby ke through hint text, aur validation fail hone par live-region error announcements.",
+      "fullName": {
+        "label": "Pura Naam",
+        "placeholder": "Priya Sharma",
+        "hint": "Pehla aur last naam"
+      },
+      "email": {
+        "label": "Email Address",
+        "placeholder": "you@company.com",
+        "hint": "Hum aapka email kabhi share nahi karenge"
+      },
+      "password": {
+        "label": "Password",
+        "placeholder": "Kam se kam 8 characters",
+        "hint": "Ek number aur special character zaroor daalein"
+      },
+      "role": {
+        "label": "Role",
+        "options": {
+          "engineer": "Software Engineer",
+          "designer": "UX Designer",
+          "pm": "Product Manager",
+          "qa": "QA Engineer",
+          "devrel": "Developer Relations"
+        }
+      },
+      "bio": {
+        "label": "Bio",
+        "placeholder": "Apne baare mein batayein…",
+        "hint": "Optional — max 300 characters"
+      },
+      "submit": "Submit Karein",
+      "reset": "Reset Karein",
+      "formSuccess": "Form successfully submit ho gaya!",
+      "note": "Errors role=\"alert\" + aria-live=\"assertive\" use karte hain, taaki blur hote hi screen reader beech mein aakar unhe turant announce kare.",
+      "errors": {
+        "required": "{{field}} zaroori hai.",
+        "email": "Ek valid email address daalein.",
+        "minlength": "Kam se kam {{length}} characters hone chahiye.",
+        "invalid": "Invalid value.",
+        "formHasErrors": "Form mein errors hain. Please highlighted fields correct karein.",
+        "fixFormErrors": "Submit karne se pehle form ke errors theek karein."
+      },
+      "fieldLabels": {
+        "name": "Pura Naam",
+        "email": "Email",
+        "password": "Password",
+        "role": "Role"
+      }
+    },
+    "modal": {
+      "componentLabel": "Component 03",
+      "title": "Modal / Dialog",
+      "description": "Focus trap, Escape se close, close karne par focus restoration, aria-modal, aria-labelledby, aria-describedby.",
+      "infoDialog": "Info Dialog",
+      "confirmDelete": "Confirm Delete",
+      "formInModal": "Modal mein Form",
+      "fullscreen": "Fullscreen",
+      "note": "Tab / Shift+Tab sirf dialog ke andar hi cycle karte hain. Close karne par focus wapas trigger karne wale button pe chala jaata hai — WCAG 2.4.3."
+    },
+    "table": {
+      "componentLabel": "Component 04",
+      "title": "Data Table",
+      "description": "Sortable columns par aria-sort, row selection ke liye aria-selected, aria-multiselectable, selection count ke liye live status.",
+      "tableLabel": "Team Members",
+      "columns": {
+        "name": "Naam",
+        "role": "Role",
+        "department": "Department",
+        "status": "Status",
+        "joined": "Join Kiya"
+      },
+      "roles": {
+        "leadEngineer": "Lead Engineer",
+        "uxDesigner": "UX Designer",
+        "productManager": "Product Manager",
+        "backendEngineer": "Backend Engineer",
+        "qaEngineer": "QA Engineer",
+        "devrelEngineer": "DevRel Engineer"
+      },
+      "departments": {
+        "platform": "Platform",
+        "design": "Design",
+        "product": "Product",
+        "quality": "Quality",
+        "community": "Community"
+      },
+      "statuses": {
+        "active": "Active",
+        "pending": "Pending",
+        "inactive": "Inactive"
+      },
+      "sortedAnnouncement": "{{column}} ke hisaab se sort kiya gaya, {{direction}}",
+      "ascending": "ascending",
+      "descending": "descending",
+      "rowsSelectedAnnouncement": "{{count}} row selected hai",
+      "rowsSelectedAnnouncement_plural": "{{count}} rows selected hain"
+    },
+    "tabs": {
+      "componentLabel": "Component 05",
+      "title": "Tabs",
+      "description": "WAI-ARIA Tabs pattern — arrow keys se navigate karein, aria-selected, role=\"tabpanel\", disabled tabs skip ho jaate hain.",
+      "ariaLabel": "Feature Tabs",
+      "overview": {
+        "label": "Overview",
+        "paragraph1": "Overview panel. Tabs ke beech move karne ke liye arrow keys dabayein. Panel content mein focus le jaane ke liye Tab dabayein.",
+        "paragraph2": "Saare tab triggers role=\"tab\" use karte hain, aur panels role=\"tabpanel\" ke saath aria-labelledby use karte hain."
+      },
+      "keyboardShortcuts": {
+        "label": "Keyboard Shortcuts",
+        "item1": "Tabs ke beech move karein",
+        "item2Home": "Pehla tab",
+        "item2End": "Aakhri tab",
+        "item3": "Panel content mein move karein"
+      },
+      "wcagCriteria": {
+        "label": "WCAG Criteria",
+        "paragraph": "Isme 2.1.1 Keyboard, 1.3.1 Info & Relationships, 4.1.2 Name/Role/Value, 2.4.7 Focus Visible cover hote hain."
+      },
+      "disabled": {
+        "label": "Disabled",
+        "paragraph": "Ye content accessible nahi hai kyunki tab disabled hai."
+      },
+      "note": "Arrow use karte waqt disabled tabs skip ho jaate hain. Sirf active tab mein tabindex=\"0\" hota hai; inactive tabs tabindex=\"-1\" use karte hain."
+    },
+    "accordion": {
+      "componentLabel": "Component 06",
+      "title": "Accordion",
+      "description": "aria-expanded, role=\"region\", animated panels, triggers ke beech arrow key navigation.",
+      "items": {
+        "wcag": {
+          "title": "WCAG kya hai?",
+          "content": "Web Content Accessibility Guidelines (WCAG) W3C dwara develop ki gayi hain aur ye define karti hain ki disabled logon ke liye web content ko kaise zyada accessible banaya jaaye. WCAG 2.1 aur 2.2 mein POUR principles cover hote hain."
+        },
+        "keyboard": {
+          "title": "Keyboard accessibility",
+          "content": "Saare interactive elements sirf keyboard se operate hone chahiye. Users kabhi bhi kisi component mein keyboard exit ke bina fasne nahi chahiye."
+        },
+        "screenReader": {
+          "title": "Screen reader support",
+          "content": "Screen readers semantic HTML aur ARIA attributes par depend karte hain. Har component VoiceOver (macOS/iOS) aur NVDA (Windows) ke saath test kiya gaya hai."
+        },
+        "contrast": {
+          "title": "Colour contrast requirements",
+          "content": "WCAG 1.4.3 ke hisaab se normal text ke liye ≥4.5:1 contrast zaroori hai. Is library ke saare tokens is ratio ko meet ya exceed karte hain."
+        }
+      },
+      "note": "Har trigger aria-expanded + aria-controls use karta hai. Panels role=\"region\" + aria-labelledby use karte hain. Arrow keys triggers ke beech move karti hain; disabled items skip ho jaate hain."
+    },
+    "dropdown": {
+      "componentLabel": "Component 07",
+      "title": "Dropdown Menu",
+      "description": "WAI-ARIA Menu Button pattern — role=\"menu\", aria-haspopup, arrow key navigation, Escape se close.",
+      "actionsTrigger": "Actions",
+      "exportTrigger": "Export",
+      "items": {
+        "edit": "Edit Karein",
+        "duplicate": "Duplicate Karein",
+        "archive": "Archive Karein",
+        "delete": "Delete Karein",
+        "restricted": "Restricted (disabled)"
+      },
+      "exportItems": {
+        "csv": "CSV Ke Roop Mein Export Karein",
+        "json": "JSON Ke Roop Mein Export Karein",
+        "pdf": "PDF Ke Roop Mein Export Karein"
+      },
+      "selectedToast": "Select kiya gaya: {{label}}",
+      "note": "Escape menu close karke focus trigger pe wapas laata hai. Disabled items mein aria-disabled hota hai aur wo keyboard navigation mein skip ho jaate hain."
+    },
+    "toast": {
+      "componentLabel": "Component 08",
+      "title": "Toast / Notification",
+      "description": "info/success/warning ke liye role=\"status\" (polite); errors ke liye role=\"alert\" (assertive). Error toasts persistent hote hain aur kabhi auto-dismiss nahi hote.",
+      "success": "Success",
+      "errorPersistent": "Error (persistent)",
+      "warning": "Warning",
+      "info": "Info",
+      "note": "Error toasts tab tak rehte hain jab tak manually dismiss na kiya jaaye (WCAG 2.2.1). Close button 44×44 px ka hai, jisme descriptive aria-label hai. Type icon + label se convey hota hai — kabhi sirf colour se nahi (1.4.1).",
+      "messages": {
+        "success": "Changes successfully save ho gaye.",
+        "error": "Kuch gadbad ho gayi — please phir se try karein.",
+        "warning": "Aapka session 5 minute mein expire ho jaayega.",
+        "info": "App ka naya version available hai."
+      }
+    },
+    "modals": {
+      "info": {
+        "title": "Accessibility Principles",
+        "intro": "Ye library saare chaar WCAG 2.1 POUR principles cover karti hai:",
+        "perceivable": { "term": "Perceivable", "desc": "Alt text, contrast, text alternatives" },
+        "operable": { "term": "Operable", "desc": "Poora keyboard access, koi trap nahi, focus management" },
+        "understandable": { "term": "Understandable", "desc": "Clear labels, error identification, predictable UI" },
+        "robust": { "term": "Robust", "desc": "Valid HTML, ARIA, real screen readers ke saath test kiya gaya" }
+      },
+      "confirmDelete": {
+        "title": "Record Delete Karein",
+        "body": "Kya aap sach mein is record ko delete karna chahte hain? Ye action wapas nahi liya ja sakta.",
+        "deletedToast": "Record delete ho gaya."
+      },
+      "formInModal": {
+        "title": "Profile Edit Karein",
+        "displayName": { "label": "Display Name", "placeholder": "Aapka naam" },
+        "jobTitle": { "label": "Job Title", "placeholder": "jaise Frontend Engineer" }
+      },
+      "fullscreen": {
+        "title": "Fullscreen Dialog",
+        "paragraph1": "Poora viewport — focus abhi bhi trap hai aur Escape abhi bhi close karta hai.",
+        "paragraph2": "Complex workflows ya mobile devices par onboarding flows ke liye useful hai."
+      }
+    }
+  }
+}
